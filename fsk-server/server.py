@@ -1,6 +1,6 @@
 from flask import Flask
 from werkzeug.contrib.cache import SimpleCache
-from flask import render_template
+from flask import send_file, jsonify
 cache = SimpleCache()
 app = Flask(__name__)
 
@@ -13,7 +13,12 @@ def color(param):
 def index():
     #color = cache.get('color')
     #return '<body bgcolor="%s">'%(color)
-    return render_template('index.html')
+    #return send_file('templates/index.html')
+    return send_file('templates/index.html')
+
+@app.route('/greeting')
+def greeting():
+    return jsonify( id = 1, content = 'dance with dragons' )
 
 if __name__ == '__main__':
     cache.set('color', '000000')
