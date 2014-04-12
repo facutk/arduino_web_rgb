@@ -4,6 +4,10 @@
 ##Description
 Server to send colors to Arduino via serial interface.
 
+See it in action https://www.youtube.com/watch?v=uE0AGFHBTxQ
+More information http://blog.facu.tk/2014/04/arduino-web-rgb.html
+
+
 ##Installation
 * git clone https://github.com/facutk/arduino_web_rgb.git
 * cd arduino_web_rgb
@@ -15,4 +19,4 @@ Server to send colors to Arduino via serial interface.
 * Wire Arduino circuit and download firmware/arduino_web_rgb.ino
 * Connect Arduino to computer via usb
 * python fsk-server/server.py
-* Browse to http://<IP>:5000
+* Browse to http://COMPUTER_IP:5000
